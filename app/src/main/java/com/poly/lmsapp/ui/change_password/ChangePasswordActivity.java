@@ -1,11 +1,8 @@
 package com.poly.lmsapp.ui.change_password;
 
-import android.annotation.SuppressLint;
-import android.os.Build;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.Button;
-import androidx.annotation.RequiresApi;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.poly.lmsapp.R;
@@ -13,6 +10,7 @@ import com.poly.lmsapp.commons.base.BaseActivity;
 import com.poly.lmsapp.commons.base.BaseDialog;
 import com.poly.lmsapp.commons.base.BaseDialogListener;
 import com.poly.lmsapp.commons.network.Client;
+import com.poly.lmsapp.commons.utils.PersonSingleton;
 import com.poly.lmsapp.commons.utils.Status;
 import com.poly.lmsapp.model.BaseResponse;
 import com.poly.lmsapp.model.User;
@@ -37,8 +35,7 @@ public class ChangePasswordActivity extends BaseActivity {
         setContentView(R.layout.activity_change_password);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
-    @SuppressLint("ResourceType")
+
     @Override
     public void createView() {
         setToolbarTitle("Đổi mật khẩu");
@@ -64,7 +61,7 @@ public class ChangePasswordActivity extends BaseActivity {
     @Override
     public void fetchData() {
         showLoading(true);
-        User user = new User(edtPass1.getText().toString(),edtPass2.getText().toString(),null);
+        User user = new User(edtPass1.getText().toString(),edtPass2.getText().toString(), PersonSingleton.getInstance().getUser().getIdGroup(),-1);
         Client.getInstance().changePassword(user).enqueue(new Callback<BaseResponse>() {
             @Override
             public void onResponse(Call<BaseResponse> call, Response<BaseResponse> response) {
