@@ -295,9 +295,7 @@ public class User implements Parcelable {
     }
 
     public void setGender(String gender) {
-        this.gender =
-
-                gender;
+        this.gender = gender;
     }
 
     public String getAddress() {
