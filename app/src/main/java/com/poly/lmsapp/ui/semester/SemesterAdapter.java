@@ -7,6 +7,7 @@ import androidx.cardview.widget.CardView;
 import com.poly.lmsapp.R;
 import com.poly.lmsapp.commons.base.LMSAdapter;
 import com.poly.lmsapp.commons.resource.KeyResource;
+import com.poly.lmsapp.commons.utils.EnviromentSingleton;
 import com.poly.lmsapp.model.Semester;
 import com.poly.lmsapp.ui.department.DepartmentActivity;
 
@@ -40,6 +41,7 @@ public class SemesterAdapter extends LMSAdapter {
         mTvTime.setText(semester.getCreateAt());
         mTvNguoiTao.setText(semester.getCreateBy().getName());
         mContainer.setOnClickListener(view -> {
+            EnviromentSingleton.getEnviromentSingleton().setRepositoryType("Not Type");
             Intent intent = new Intent(context, DepartmentActivity.class);
             intent.putExtra(KeyResource.ID_SEMESTER, semester.getId());
             intent.putExtra(KeyResource.NAME_SEMESTER, semester.getName());

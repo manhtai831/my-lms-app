@@ -11,6 +11,8 @@ import com.poly.lmsapp.commons.base.BaseDialog;
 import com.poly.lmsapp.commons.base.BaseDialogListener;
 import com.poly.lmsapp.commons.base.LMSAdapter;
 import com.poly.lmsapp.commons.local.LocalManager;
+import com.poly.lmsapp.commons.resource.KeyResource;
+import com.poly.lmsapp.commons.resource.StringResource;
 import com.poly.lmsapp.model.MenuDraw;
 import com.poly.lmsapp.ui.account.AccountActivity;
 import com.poly.lmsapp.ui.activity.SplashActivity;
@@ -53,7 +55,10 @@ public class AccountMenuAdapter extends LMSAdapter {
                 BaseDialog.showBaseDialog((Activity) context, "Xác nhận đăng xuất", new BaseDialogListener() {
                     @Override
                     public void confirmListener() {
+                        StringResource.token = LocalManager.getInstance(context).getString(KeyResource.TOKEN);
+
                         LocalManager.getInstance(context).clear();
+                        LocalManager.getInstance(context).putString(KeyResource.FCM_TOKEN,StringResource.token);
                         ((Activity) context).finish();
                         context.startActivity(new Intent(context, SplashActivity.class));
                     }

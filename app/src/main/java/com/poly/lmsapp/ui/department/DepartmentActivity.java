@@ -5,10 +5,6 @@ import android.os.Build;
 import android.view.View;
 import android.widget.TextView;
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.poly.lmsapp.R;
@@ -106,7 +102,7 @@ public class DepartmentActivity extends BaseActivity {
     }
 
     private void getDepartmentSemester() {
-        map.put(KeyResource.ID_REPOSITORY, intent.getIntExtra(KeyResource.ID_SEMESTER, -1));
+        map.put(KeyResource.ID_SEMESTER, intent.getIntExtra(KeyResource.ID_SEMESTER, -1));
 
         Client.getInstance().getAllDepartment(map).enqueue(new Callback<BaseResponse>() {
             @RequiresApi(api = Build.VERSION_CODES.N)
