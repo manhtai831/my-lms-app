@@ -142,7 +142,7 @@ public class FilePicker implements EasyPermissions.PermissionCallbacks {
     }
 
     public static void showFilePicker() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+        if (Build.VERSION.SDK_INT >= 30) {
             if (Environment.isExternalStorageManager()) {
                 final Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
                 intent.setType("*/*");
