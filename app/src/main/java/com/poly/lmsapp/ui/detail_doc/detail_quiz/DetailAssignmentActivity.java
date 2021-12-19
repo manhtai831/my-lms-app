@@ -323,9 +323,12 @@ public class DetailAssignmentActivity extends BaseActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             listData.forEach(e -> {
                 e.getListCauTraLoi().forEach(t -> {
-                    if (e.getIdDapAp() == t.getId()) {
-                        point += (10 / listData.size());
+                    if (t.isChecked()) {
+                        if (e.getIdDapAp() == t.getId()) {
+                            point += (10 / listData.size());
+                        }
                     }
+
                 });
             });
         }
@@ -444,12 +447,12 @@ public class DetailAssignmentActivity extends BaseActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (resultCode == RESULT_OK) {
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 if (Environment.isExternalStorageManager()) {
                     FilePicker.callBackPicker(requestCode, resultCode, data);
                     uploadFile();
                 }
-            }else{
+            } else {
                 FilePicker.callBackPicker(requestCode, resultCode, data);
                 uploadFile();
             }
