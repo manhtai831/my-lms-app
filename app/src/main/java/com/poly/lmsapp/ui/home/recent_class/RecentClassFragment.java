@@ -46,7 +46,6 @@ public class RecentClassFragment extends Fragment {
     public static RecentClassFragment getInstance() {
         if (recentClassFragment == null) recentClassFragment
                 = new RecentClassFragment();
-
         return recentClassFragment;
     }
 
