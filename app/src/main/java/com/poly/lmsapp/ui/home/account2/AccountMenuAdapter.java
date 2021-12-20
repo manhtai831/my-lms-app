@@ -11,13 +11,19 @@ import com.poly.lmsapp.commons.base.BaseDialog;
 import com.poly.lmsapp.commons.base.BaseDialogListener;
 import com.poly.lmsapp.commons.base.LMSAdapter;
 import com.poly.lmsapp.commons.local.LocalManager;
+import com.poly.lmsapp.commons.network.Client;
 import com.poly.lmsapp.commons.resource.KeyResource;
 import com.poly.lmsapp.commons.resource.StringResource;
+import com.poly.lmsapp.model.BaseResponse;
 import com.poly.lmsapp.model.MenuDraw;
+import com.poly.lmsapp.model.User;
 import com.poly.lmsapp.ui.account.AccountActivity;
 import com.poly.lmsapp.ui.activity.SplashActivity;
 import com.poly.lmsapp.ui.change_password.ChangePasswordActivity;
 import com.poly.lmsapp.ui.update_account.UpdateAccountActivity;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import java.util.ArrayList;
 
@@ -56,9 +62,21 @@ public class AccountMenuAdapter extends LMSAdapter {
                     @Override
                     public void confirmListener() {
                         StringResource.token = LocalManager.getInstance(context).getString(KeyResource.TOKEN);
+                        String userName = LocalManager.getInstance(context).getString(KeyResource.USERNAME);
+                        String password = LocalManager.getInstance(context).getString(KeyResource.PASSWORD);
+                        Client.getInstance().login(new User(userName, password, " ")).enqueue(new Callback<BaseResponse>() {
+                            @Override
+                            public void onResponse(Call<BaseResponse> call, Response<BaseResponse> response) {
 
+                            }
+
+                            @Override
+                            public void onFailure(Call<BaseResponse> call, Throwable t) {
+
+                            }
+                        });
                         LocalManager.getInstance(context).clear();
-                        LocalManager.getInstance(context).putString(KeyResource.FCM_TOKEN,StringResource.token);
+                        LocalManager.getInstance(context).putString(KeyResource.FCM_TOKEN, StringResource.token);
                         ((Activity) context).finish();
                         context.startActivity(new Intent(context, SplashActivity.class));
                     }
