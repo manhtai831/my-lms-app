@@ -37,19 +37,22 @@ public interface Service {
     @GET("api/get_all_departments")
     Call<BaseResponse> getAllDepartment(@QueryMap Map<String, Object> map);
 
-
     @GET("api/get_repo_department")
     Call<BaseResponse> getAllRepoDepartment(@QueryMap Map<String, Object> map);
 
+    //danh sach mon hoc
     @GET("api/get_subjects")
     Call<BaseResponse> getAllSubject(@QueryMap Map<String, Object> map);
 
+    //lay danh sach lop hoc
     @GET("api/get_all_class")
     Call<BaseResponse> getAllClass(@QueryMap Map<String, Object> map);
 
+    // check dang ky lop hoc
     @POST("api/check_registered_class")
     Call<BaseResponse> checkRegisterClass(@Body RegisterClass o);
 
+    //dnag ky lop hoc
     @POST("api/register_class")
     Call<BaseResponse> registerClass(@Body RegisterClass o);
 
@@ -86,6 +89,7 @@ public interface Service {
     @GET("/api/get_subject_registered_class")
     Call<BaseResponse> getSubjectRegisteredClass();
 
+    //upload file
     @POST("/api/create_file_attach")
     Call<BaseResponse> createFileAttach(@Body FileAttach o);
 

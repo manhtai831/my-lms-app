@@ -18,13 +18,31 @@
         <entry key="..\:/Users/DUCHUY/Documents/GitHub/lms-app/app/src/main/res/layout/activity_main.xml" value="0.28940217391304346" />
         <entry key="..\:/Users/DUCHUY/Documents/GitHub/lms-app/app/src/main/res/layout/activity_register.xml" value="0.33" />
         <entry key="..\:/Users/DUCHUY/Documents/GitHub/lms-app/app/src/main/res/layout/activity_splash.xml" value="0.28940217391304346" />
+        <entry key="..\:/Users/tuan/AndroidStudioProjects/my-lms-app/app/src/main/res/layout/activity_account.xml" value="0.33" />
+        <entry key="..\:/Users/tuan/AndroidStudioProjects/my-lms-app/app/src/main/res/layout/activity_choose.xml" value="0.16145833333333334" />
+        <entry key="..\:/Users/tuan/AndroidStudioProjects/my-lms-app/app/src/main/res/layout/activity_class.xml" value="0.24739583333333334" />
+        <entry key="..\:/Users/tuan/AndroidStudioProjects/my-lms-app/app/src/main/res/layout/activity_detail_class.xml" value="0.16145833333333334" />
+        <entry key="..\:/Users/tuan/AndroidStudioProjects/my-lms-app/app/src/main/res/layout/activity_file_system.xml" value="0.16145833333333334" />
+        <entry key="..\:/Users/tuan/AndroidStudioProjects/my-lms-app/app/src/main/res/layout/activity_group_type.xml" value="0.24739583333333334" />
+        <entry key="..\:/Users/tuan/AndroidStudioProjects/my-lms-app/app/src/main/res/layout/activity_home.xml" value="0.16145833333333334" />
+        <entry key="..\:/Users/tuan/AndroidStudioProjects/my-lms-app/app/src/main/res/layout/activity_list_type.xml" value="0.24739583333333334" />
+        <entry key="..\:/Users/tuan/AndroidStudioProjects/my-lms-app/app/src/main/res/layout/activity_nganh_hkhl.xml" value="0.16145833333333334" />
+        <entry key="..\:/Users/tuan/AndroidStudioProjects/my-lms-app/app/src/main/res/layout/activity_quiz.xml" value="0.16145833333333334" />
+        <entry key="..\:/Users/tuan/AndroidStudioProjects/my-lms-app/app/src/main/res/layout/activity_subject.xml" value="0.24739583333333334" />
+        <entry key="..\:/Users/tuan/AndroidStudioProjects/my-lms-app/app/src/main/res/layout/fragment_account_menu.xml" value="0.15104166666666666" />
+        <entry key="..\:/Users/tuan/AndroidStudioProjects/my-lms-app/app/src/main/res/layout/item_class.xml" value="0.24739583333333334" />
+        <entry key="..\:/Users/tuan/AndroidStudioProjects/my-lms-app/app/src/main/res/layout/item_file_system.xml" value="0.24739583333333334" />
+        <entry key="..\:/Users/tuan/AndroidStudioProjects/my-lms-app/app/src/main/res/layout/item_group_type.xml" value="0.24739583333333334" />
+        <entry key="..\:/Users/tuan/AndroidStudioProjects/my-lms-app/app/src/main/res/layout/item_monhoc.xml" value="0.16145833333333334" />
+        <entry key="..\:/Users/tuan/AndroidStudioProjects/my-lms-app/app/src/main/res/layout/item_respository.xml" value="0.15104166666666666" />
+        <entry key="..\:/Users/tuan/AndroidStudioProjects/my-lms-app/app/src/main/res/layout/item_subject.xml" value="0.24739583333333334" />
       </map>
     </option>
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android API 30 Platform" project-jdk-type="Android SDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="Android API 30 Platform" project-jdk-type="Android SDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
