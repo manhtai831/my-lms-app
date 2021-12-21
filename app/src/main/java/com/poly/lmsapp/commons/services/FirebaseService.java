@@ -35,7 +35,7 @@ public class FirebaseService extends FirebaseMessagingService {
 
     @Override
     public void onNewToken(String token) {
-        Log.d(TAG, "Refreshed token: " + token);
+        Log.d(TAG, "FCM TOKENNNNNNNNNNNNNNN " + token);
 
         sendRegistrationToServer(token);
     }

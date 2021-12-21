@@ -83,7 +83,7 @@ public class LoginActivity extends BaseActivity {
 
                     User user1 = (User) Utils.jsonDecode(baseResponse.getData(), User.class);
                     LocalManager.getInstance(LoginActivity.this).putString(KeyResource.USERNAME, mEdtUserName.getText().toString());
-                    LocalManager.getInstance(LoginActivity.this).putString(KeyResource.PASSWORD, mEdtUserName.getText().toString());
+                    LocalManager.getInstance(LoginActivity.this).putString(KeyResource.PASSWORD, mEdtPassword.getText().toString());
                     LocalManager.getInstance(LoginActivity.this).putString(KeyResource.TOKEN, user1.getToken());
                     PersonSingleton.getInstance().setUser(user1);
                     StringResource.token = user1.getToken();
